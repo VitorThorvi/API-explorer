@@ -1,5 +1,5 @@
-const AppError = require("../utils/AppError");
-const sqliteConnection = require("../database/sqlite");
+const AppError = require('../utils/AppError')
+const sqliteConnection = require('../database/sqlite')
 
 class UsersController {
     /*
@@ -24,13 +24,11 @@ class UsersController {
            throw new AppError("Este e-mail já está em uso.");
        }
 
-       await database.run("INSERT INTO users (name, email, password) VALUES = (?, ?, ?)",
-           [name, email, password]
-       );
+        await database.run("INSERT INTO users (name, email, password) VALUES (?, ?, ?)", [name, email, password])
 
-       return response.status(201).json();
-
+        return response.status(201).json()
     }
+
 }
 
-module.exports = UsersController;
+module.exports = UsersController
