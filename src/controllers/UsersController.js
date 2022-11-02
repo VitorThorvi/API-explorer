@@ -54,7 +54,7 @@ class UsersController {
         user.email = email ?? user.email;
 
         if(password && !old_password) {
-            throw new AppError("Você não informou a senha antiga.");
+          throw new AppError("Você não informou a senha antiga.");
         }
 
         if(password && old_password) {
